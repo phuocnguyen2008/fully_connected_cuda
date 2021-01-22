@@ -4,12 +4,12 @@
 
 #include "../utils/matrix.hh"
 
-class NNLayer {
+class Layer {
 protected:
 	std::string name;
 
 public:
-	virtual ~NNLayer() = 0;
+	virtual ~Layer() = 0;
 
 	virtual Matrix& forward(Matrix& A) = 0;
 	virtual Matrix& backprop(Matrix& dZ, float learning_rate) = 0;
@@ -18,4 +18,4 @@ public:
 
 };
 
-inline NNLayer::~NNLayer() {}
+inline Layer::~Layer() {}
