@@ -1,7 +1,8 @@
 #pragma once
+
 #include "layer.hh"
 
-class FullyConnectedLayer : public NNLayer {
+class FullyConnectedLayer : public Layer {
 private:
 	const float weights_init_threshold = 0.01;
 
